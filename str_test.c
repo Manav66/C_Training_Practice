@@ -8,19 +8,20 @@
 
 // Macro functions
 
-char strfunc(char ch[]){	
+char strfunc(char ch[])
+{	
 	printf("%s\n", ch);
-	}
+}
 
+// main function
 
-int main(){
+int main()
+{
 	char test1[] = "manav";
-//	printf("\n %c \n", str[3]);
-	
-//	strfunc(test1);	
-//
-	space;
+	// printf("\n %c \n", str[3]);	
+	// strfunc(test1);	
 
+	space;
 
 	char str1[100];
 
@@ -30,14 +31,13 @@ int main(){
 
 	// safe function to avoid string buffer
 	
-	char str2[] = "Testing";
-	
+	char str2[100];
 	char test[] = "Testing";
 	space;
 
-	printf("%d\n" , strcmp(str2, test));
+	strcpy_s(str2, test);
 
-
+	// printf("%d\n" , strcmp(str2, test));
 	space;
 
 	printf("Tested : %s", str2);
