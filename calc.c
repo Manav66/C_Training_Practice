@@ -1,12 +1,14 @@
-// Welcome to my Calculator. It can perform Arithmetic as well as Bitwise Operations.
+// Welcome to Calculator Program. It has the functionalities to perform Arithmetic as well as Bitwise Operations.
 
+// Header Files
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
 
-
+// Macro for space between lines.
 #define spc printf("\n");
 
+// Main Program
 int main()
 {	
 	printf("Hello, Welcome to my calculator");
@@ -107,6 +109,7 @@ int main()
 		}
 	spc;
 	printf("If you want to continue, press 1. Else press 0");
+	spc;
 	scanf("%d", &cnt);
 	}
 	
