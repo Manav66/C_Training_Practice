@@ -1,61 +1,39 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void swap(int *a, int *b)
-{
-	int temp = *a;
-	*a = *b;
-	*b = temp;
-}
-
-
-
-void sort(int arr[], int n)
-{
-	if(n == 1)
-		return;
-
-	int count =0;
-
-	for(int i=0;i<n-1;i++)
-	{
-		if(arr[i]>arr[i+1])
-			{
-			swap(&arr[i], &arr[i+1]);
-			count++;
-			}
-	}
-
-	if(count == 0)
-		return;
-	
-	sort(arr, n-1);		
-}
-
 
 int main()
 {
 	int size;
-        int arr[10];
+        int a[10];
         printf("\nEnter size of array: \n");
         scanf("%d", &size);
 
         printf("\nenter array elements: \n");
         for(int i=0;i<size;i++)
         {
-                scanf("%d", &arr[i]);
+                scanf("%d", &a[i]);
         }
 	
-	sort(arr, size);
-	 
-	/*	
-	printf("\nSorted array is: ");
 	for(int i=0;i<size;i++)
 	{
-		printf("\n %d", arr[i]);
+		for(int j=i+1;j<size;j++)
+		{
+			if(a[i] == a[j])
+			{
+				for(int k=j;k<size;k++)
+				{
+					a[k] = a[k+1];
+				}
+				j--;
+				size--;
+			}
+		}
 	}
-	*/
 
+	printf("\nThe resulting array is: \n");
+	for(int i=0;i<size;i++)
+		printf("%d ", a[i]);
 	
 
 	return 0;
