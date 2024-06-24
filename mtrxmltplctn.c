@@ -19,7 +19,7 @@ int main()
 	{
 		for(int j=0;j<clmn1;j++)
 		{
-			scanf("%d ", &arr1[i][j]);
+			scanf("%d", &arr1[i][j]);
 		}
 	}
 
@@ -29,7 +29,7 @@ int main()
 	{
 		for(int j=0;j<clmn2;j++)
 		{
-			scanf("%d ", &arr2[i][j]);
+			scanf("%d", &arr2[i][j]);
 		}
 	}
 	
@@ -44,18 +44,18 @@ int main()
 		{
 			arr3[i][j] = 0;
 
-			for(int k=0;k<row2;k++)
+			for(int k=0;k<clmn1;k++)
 			{
-				arr3[i][j] += arr1[i][k] + arr2[k][j];
+				arr3[i][j] += arr1[i][k] * arr2[k][j];
 			}
 
 		}
 	}	
 	
 
-	for(int i=0;i<clmn1;i++)
+	for(int i=0;i<row1;i++)
 	{
-		for(int j=0;j<row2;j++)
+		for(int j=0;j<clmn2;j++)
 		{
 			printf("%d ", arr3[i][j]);
 		}
