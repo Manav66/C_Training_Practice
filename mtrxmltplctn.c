@@ -55,7 +55,7 @@ int main()
 
 	for(int i=0;i<row1;i++)
 	{
-		for(int j=0;j<clmn2;j++)
+		for(int j=0;j<clmin2;j++)
 		{
 			printf("%d ", arr3[i][j]);
 		}
