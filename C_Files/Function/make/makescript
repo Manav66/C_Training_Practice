@@ -1,0 +1,26 @@
+CC = gcc
+CFLAGS = -Wall -g -Werror -o
+LDFLAGS = -c
+
+SRC = ./src
+OBJ = ./obj
+INC = ./include
+BIN = ./bin
+
+IFLAGS = -I $(INC)
+
+$(BIN)/calc: $(OBJ)/main1.o $(OBJ)/functions.o
+	$(CC) $(CFLAGS) $(BIN)/calc $(OBJ)/main1.o $(OBJ)/functions.o
+
+$(OBJ)/main1.o: $(SRC)/main1.c
+	$(CC) $(LDFLAGS) $(SRC)/main1.c $(IFLAGS)
+
+$(OBJ)/functions.o: $(SRC)/functions.c
+	$(CC) $(LDFLAGS) $(SRC)/functions.C $(IFLAGS)
+
+	mv *.o ./obj
+
+clean:
+	rm ./obj/*.o
+	rm./obj/calc
+	echo "Success"
