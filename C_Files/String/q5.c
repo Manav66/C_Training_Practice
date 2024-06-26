@@ -25,14 +25,11 @@ int main()
 			{
 				strcpy(temp, str[i]);
 				strcpy(str[i], str[j]);
-				strcpy(str[j], temp);
-				
+				strcpy(str[j], temp);			
 			}
 		}
 	}
 	
-		
-
 	printf("The string in lexicographical order are: \n");
 	for(int i=0;i<n;i++)
 	{
