@@ -10,10 +10,11 @@ int main()
 
 	printf("\nEnter the number of words you want to input\n");
 	scanf("%d", &n);
+	
 	printf("\n");
 
 	for(int i=0;i<n;i++)
-	{
+	{		
 		fgets(str[i], sizeof(str[i]), stdin);
 	}
 
@@ -31,6 +32,7 @@ int main()
 	}
 	
 	printf("The string in lexicographical order are: \n");
+
 	for(int i=0;i<n;i++)
 	{
 		printf("%s\n", str[i]);
